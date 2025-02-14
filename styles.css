@@ -1,0 +1,119 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    margin: 0;
+    margin-bottom: 80px;
+
+    font-family: 'Roboto', sans-serif;
+    background-image: url('fondo_corazones.webp');
+    background-repeat: repeat;
+    background-size: auto; /* Ajusta el tamaño de la imagen según sea necesario */
+    background-position: top left; 
+}
+
+.wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+#titulo {
+
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    color: blueviolet; /* Asegúrate de que el texto sea visible sobre el fondo */
+    font-size: 30px;
+}
+
+#titulo1 {
+    text-align: center;
+    margin-bottom: 5px;
+    color: blue; /* Asegúrate de que el texto sea visible sobre el fondo */
+    font-size: 20px;
+    
+}
+
+#titulo3 {
+}
+
+#imagen {
+    display: block;
+    max-height: 200px;
+    margin: 20px auto;
+    border-radius: 15px;
+}
+
+#contador_mes {
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: blue;
+    text-align: center;
+    margin-top: 10px;
+    font-family: sans-serif;
+    color: blue; /* Asegúrate de que el texto sea visible sobre el fondo */
+    font-size: 20px;
+}
+
+#contador_dia {
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: blue;
+    text-align: center;
+    margin-top: 10px;
+    font-family: sans-serif;
+    color: blue; /* Asegúrate de que el texto sea visible sobre el fondo */
+    font-size: 20px;
+}
+
+#contador_hora {
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: blue;
+    text-align: center;
+    margin-top: 10px;
+    font-family: sans-serif;
+    color: blue; /* Asegúrate de que el texto sea visible sobre el fondo */
+    font-size: 20px;
+}
+
+#div_doble{
+    display: inline-block;
+
+    padding: 25px;
+}
+
+#div_texto{
+
+    width: 80%;
+    font-size: 16px;
+    text-align: justify;
+    margin-top: 20px;
+    color: white;
+    background: rgba(0, 0, 0, 0.2); /* Fondo semitransparente para mejorar legibilidad */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#div_alto{
+    display: inline;
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    padding: 10px 0;
+    background: rgba(0, 0, 0, 0.3); /* Fondo semitransparente */
+    color: white;
+    height: 30px;
+}
+
+html {
+  min-height: 100%;
+  position: relative;
+}
