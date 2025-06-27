@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar Maestro</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar" id="loggedInNavbar">
+        </nav>
+
+    <div class="container">
+        <h1>Registrar Maestro</h1>
+        <form id="teacherRegistrationForm">
+            <input type="hidden" id="teacherType" value="maestro"> <div class="form-group">
+                <label for="teacherName">Nombre:</label>
+                <input type="text" id="teacherName" required>
+            </div>
+            <div class="form-group">
+                <label for="teacherLastName">Apellido:</label>
+                <input type="text" id="teacherLastName" required>
+            </div>
+            <div class="form-group">
+                <label for="teacherID">Cédula:</label>
+                <input type="text" id="teacherID" required>
+            </div>
+            <div class="form-group">
+                <label for="teacherEmail">Correo:</label>
+                <input type="email" id="teacherEmail" required>
+            </div>
+            <div class="form-group">
+                <label for="teacherUsername">Usuario:</label>
+                <input type="text" id="teacherUsername" required>
+            </div>
+            <div class="form-group">
+                <label for="teacherPassword">Contraseña:</label>
+                <input type="password" id="teacherPassword" required>
+            </div>
+            <div class="form-group">
+                <label for="teacherSubject">Materia:</label>
+                <select id="teacherSubject" required>
+                    <option value="">Seleccione Materia</option>
+                    </select>
+            </div>
+            <div class="form-group">
+                <label for="teacherGradeLevel">Nivel de Grado:</label>
+                <select id="teacherGradeLevel" required>
+                    <option value="">Seleccione Nivel</option>
+                    <option value="primaria">Primaria</option>
+                    <option value="bachiller">Bachiller</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="teacherGradeNumber">Grado:</label>
+                <select id="teacherGradeNumber" required>
+                    <option value="">Seleccione Grado</option>
+                    </select>
+            </div>
+            <div class="form-group">
+                <label for="teacherSection">Sección:</label>
+                <select id="teacherSection" required>
+                    <option value="">Seleccione Sección</option>
+                    </select>
+            </div>
+            <button type="submit">Registrar Maestro</button>
+        </form>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

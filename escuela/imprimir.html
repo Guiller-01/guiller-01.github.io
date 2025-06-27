@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imprimir Notas</title>
+    <link rel="stylesheet" href="css/imprimir.css">
+</head>
+<body>
+    <div class="container">
+        <div id="printContent">
+            </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const printContentDiv = document.getElementById('printContent');
+            const printData = JSON.parse(localStorage.getItem('printGradesData'));
+
+            if (printData) {
+                let htmlContent = `
+                    <div class="print-header">
+                        <h1>Boleta de Calificaciones</h1>
+                        <p><strong>Alumno:</strong> ${printData.studentName} ${printData.studentLastName}</p>
+                        <p><strong>Cédula:</strong> ${printData.studentID}</p>
+                    </div>
+                `;
+                htmlContent += printData.tableHTML;
+                printContentDiv.innerHTML = htmlContent;
+
+                // Limpiar el localStorage después de cargar los datos
+                localStorage.removeItem('printGradesData');
+
+                // Imprimir automáticamente la página
+                window.print();
+            } else {
+                printContentDiv.innerHTML = '<p style="text-align: center; margin-top: 50px;">No hay datos de notas para imprimir.</p>';
+            }
+        });
+    </script>
+</body>
+</html>

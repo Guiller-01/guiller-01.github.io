@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ver Pagos</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar" id="loggedInNavbar">
+        </nav>
+
+    <div class="container">
+        <h1>Ver Pagos Pendientes</h1>
+
+        <div class="form-group">
+            <label for="pendingPaymentsSelect">Seleccione un Pago Pendiente:</label>
+            <select id="pendingPaymentsSelect">
+                <option value="">-- Seleccione un Pago Pendiente --</option>
+                </select>
+        </div>
+
+        <p id="noPaymentsMessage" style="display: none;">No hay pagos pendientes para revisar.</p>
+
+        <form id="paymentReviewForm" style="display: none;">
+            <h2>Detalles del Pago</h2>
+            <input type="hidden" id="reviewPaymentId">
+
+            <div class="form-group">
+                <label>Mensualidad:</label>
+                <span id="reviewMonthlyPayment" class="detail-value"></span>
+            </div>
+            <div class="form-group">
+                <label>Pagador:</label>
+                <span id="reviewPayerName" class="detail-value"></span>
+            </div>
+            <div class="form-group">
+                <label>Fecha de Pago:</label>
+                <span id="reviewPaymentDate" class="detail-value"></span>
+            </div>
+            <div class="form-group">
+                <label>Banco de Origen:</label>
+                <span id="reviewBankOrigin" class="detail-value"></span>
+            </div>
+            <div class="form-group">
+                <label>Cédula del Pagador:</label>
+                <span id="reviewPayerID" class="detail-value"></span>
+            </div>
+            <div class="form-group">
+                <label>Teléfono del Pagador:</label>
+                <span id="reviewPayerPhone" class="detail-value"></span>
+            </div>
+            <div class="form-group">
+                <label>Número de Operación:</label>
+                <span id="reviewOperationNumber" class="detail-value"></span>
+            </div>
+            <div class="form-group">
+                <label>Estado Actual:</label>
+                <span id="reviewPaymentStatus" class="detail-value"></span>
+            </div>
+
+            <button type="button" id="confirmPaymentButton" class="action-button confirm">Confirmar Pago</button>
+            <button type="button" id="rejectPaymentButton" class="action-button reject">Rechazar Pago</button>
+        </form>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

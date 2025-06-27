@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notificar Pago</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar" id="loggedInNavbar">
+        </nav>
+
+    <div class="container">
+        <h1>Notificar Pago</h1>
+
+        <div class="form-group">
+            <label for="monthlyPaymentSelect">Mensualidad a Cancelar:</label>
+            <select id="monthlyPaymentSelect" required>
+                <option value="">-- Seleccione una Mensualidad --</option>
+                </select>
+        </div>
+
+        <form id="paymentNotificationForm" style="display: none;">
+            <input type="hidden" id="selectedMonthToPay">
+
+            <div class="form-group">
+                <label for="paymentDate">Fecha del Pago:</label>
+                <input type="date" id="paymentDate" required>
+            </div>
+            <div class="form-group">
+                <label for="bankOrigin">Banco de Origen:</label>
+                <select id="bankOrigin" required>
+                    <option value="">Seleccione un banco</option>
+                    <option value="Banco de Venezuela">Banco de Venezuela</option>
+                    <option value="Banesco">Banesco</option>
+                    <option value="Mercantil">Mercantil</option>
+                    <option value="BBVA Provincial">BBVA Provincial</option>
+                    <option value="Banco Nacional de Crédito (BNC)">Banco Nacional de Crédito (BNC)</option>
+                    <option value="Banco Exterior">Banco Exterior</option>
+                    <option value="Bancaribe">Bancaribe</option>
+                    <option value="Banco Plaza">Banco Plaza</option>
+                    <option value="Banco Activo">Banco Activo</option>
+                    <option value="Banplus">Banplus</option>
+                    <option value="Banco del Tesoro">Banco del Tesoro</option>
+                    <option value="Banco Bicentenario">Banco Bicentenario</option>
+                    <option value="Otros">Otros</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="payerID">Cédula del Pagador:</label>
+                <input type="text" id="payerID" required>
+            </div>
+            <div class="form-group">
+                <label for="payerPhone">Número de Teléfono del Pagador:</label>
+                <input type="tel" id="payerPhone" placeholder="Ej: 0412-1234567" pattern="[0-9]{4}-[0-9]{7}" required>
+                <small>Formato: XXXX-XXXXXXX</small>
+            </div>
+            <div class="form-group">
+                <label for="operationNumber">Número de Operación/Referencia:</label>
+                <input type="text" id="operationNumber" required>
+            </div>
+            <div class="form-group" style="display: none;">
+                <label for="payerName">Nombre del Pagador:</label>
+                <input type="text" id="payerName" readonly>
+            </div>
+            <div class="form-group" style="display: none;">
+                <label for="payerLastName">Apellido del Pagador:</label>
+                <input type="text" id="payerLastName" readonly>
+            </div>
+            <div class="form-group" style="display: none;">
+                <label for="paymentStatus">Estado del Pago:</label>
+                <input type="text" id="paymentStatus" value="pendiente" readonly>
+            </div>
+            <button type="submit">Enviar Notificación</button>
+        </form>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

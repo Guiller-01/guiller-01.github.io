@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calificar Alumnos</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar" id="loggedInNavbar">
+        </nav>
+
+    <div class="container">
+        <h1>Calificar Alumnos</h1>
+
+        <div class="form-group">
+            <label for="studentSelect">Seleccionar Alumno:</label>
+            <select id="studentSelect">
+                <option value="">-- Seleccione un alumno --</option>
+            </select>
+        </div>
+
+        <div id="gradingArea" style="display: none;">
+            <h2>Calificar a: <span id="selectedStudentName"></span></h2>
+
+            <div class="grade-section" id="firstCutSection">
+                <h3>Primer Corte</h3>
+                <div class="form-group">
+                    <label for="firstCutTests">Cantidad de Pruebas:</label>
+                    <select id="firstCutTests" class="num-tests-select">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+                <div id="firstCutGradesContainer" class="grades-container"></div>
+                <button class="grade-button" data-cut="first">Calificar Primer Corte</button>
+                <p class="final-cut-grade" id="firstCutFinalGrade">Promedio: --</p>
+                <p class="cut-status" id="firstCutStatus"></p>
+            </div>
+
+            <div class="grade-section" id="secondCutSection">
+                <h3>Segundo Corte</h3>
+                <div class="form-group">
+                    <label for="secondCutTests">Cantidad de Pruebas:</label>
+                    <select id="secondCutTests" class="num-tests-select">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+                <div id="secondCutGradesContainer" class="grades-container"></div>
+                <button class="grade-button" data-cut="second">Calificar Segundo Corte</button>
+                <p class="final-cut-grade" id="secondCutFinalGrade">Promedio: --</p>
+                <p class="cut-status" id="secondCutStatus"></p>
+            </div>
+
+            <div class="grade-section" id="thirdCutSection">
+                <h3>Tercer Corte</h3>
+                <div class="form-group">
+                    <label for="thirdCutTests">Cantidad de Pruebas:</label>
+                    <select id="thirdCutTests" class="num-tests-select">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+                <div id="thirdCutGradesContainer" class="grades-container"></div>
+                <button class="grade-button" data-cut="third">Calificar Tercer Corte</button>
+                <p class="final-cut-grade" id="thirdCutFinalGrade">Promedio: --</p>
+                <p class="cut-status" id="thirdCutStatus"></p>
+            </div>
+
+            <div class="final-subject-grade-section">
+                <h3>Nota Final de la Materia (<span id="subjectNameDisplay"></span>)</h3>
+                <p id="finalSubjectGrade">Promedio Final: --</p>
+            </div>
+        </div>
+        <div id="noStudentsMessage" style="text-align: center; margin-top: 20px;">
+            <p>No tienes alumnos asignados o no hay alumnos inscritos todavía.</p>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

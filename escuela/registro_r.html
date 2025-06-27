@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Representante</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="nav-link">Volver a Inicio</a>
+    </nav>
+
+
+    <div class="container">
+        <h1>Registro de Representante</h1>
+        <div class="form-group">
+            <label for="existingRepresentatives">Representantes Existentes:</label>
+            <select id="existingRepresentatives">
+                <option value="">-- Registrar Nuevo Representante --</option>
+                </select>
+        </div>
+
+        <form id="representativeRegistrationForm">
+            <div class="form-group">
+                <label for="repName">Nombre:</label>
+                <input type="text" id="repName" required>
+            </div>
+            <div class="form-group">
+                <label for="repLastName">Apellido:</label>
+                <input type="text" id="repLastName" required>
+            </div>
+            <div class="form-group">
+                <label for="repID">Cédula:</label>
+                <input type="text" id="repID" required>
+            </div>
+            <div class="form-group">
+                <label for="repAge">Edad:</label>
+                <input type="number" id="repAge" min="18" required>
+            </div>
+            <div class="form-group">
+                <label for="repEmail">Correo Electrónico:</label>
+                <input type="email" id="repEmail" required>
+            </div>
+            <div class="form-group">
+                <label for="repPhone">Número de Teléfono:</label>
+                <input type="tel" id="repPhone" placeholder="Ej: 0412-1234567" pattern="[0-9]{4}-[0-9]{7}" required>
+                <small>Formato: XXXX-XXXXXXX</small>
+            </div>
+            <div class="form-group">
+                <label for="repUsername">Usuario:</label>
+                <input type="text" id="repUsername" required>
+            </div>
+            <div class="form-group">
+                <label for="repPassword">Contraseña:</label>
+                <input type="password" id="repPassword" required>
+            </div>
+            <div class="form-group">
+                <label for="repAssociatedStudent">Asociar a Estudiante (Nombre):</label>
+                <input type="text" id="repAssociatedStudent" placeholder="Nombre del alumno a asociar" required>
+            </div>
+            <button type="submit">Registrar Representante</button>
+        </form>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
