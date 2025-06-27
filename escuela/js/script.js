@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
     // --- Datos iniciales para el director ---
     const directorUser = {
-        username: 'Director',
-        password: 'Director25*',
+        username: 'director',
+        password: 'director1.',
         type: 'director'
     };
 
