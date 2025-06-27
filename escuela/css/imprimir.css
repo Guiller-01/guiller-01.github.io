@@ -1,0 +1,56 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    color: #333;
+}
+.print-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+.print-header h1 {
+    color: #0056b3;
+}
+.print-header p {
+    font-size: 1.1em;
+    margin: 5px 0;
+}
+.grades-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+.grades-table th,
+.grades-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+.grades-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    color: #333;
+}
+.grades-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+.grades-table .final-grade-row td {
+    font-weight: bold;
+    background-color: #e6f7ff;
+    color: #0056b3;
+}
+
+/* Ocultar elementos no deseados para la impresión */
+@media print {
+    body {
+        margin: 0;
+        padding: 0;
+    }
+    .container {
+        width: auto;
+        margin: 0;
+        padding: 0;
+    }
+    .navbar, .print-button {
+        display: none !important;
+    }
+}

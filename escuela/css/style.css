@@ -1,0 +1,630 @@
+/* Estilos Generales y Resets Modernizados */
+body {
+    font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #eef1f5;
+    color: #2c3e50;
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.container {
+    max-width: 960px;
+    margin: clamp(1rem, 4vw, 3rem) auto;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    box-sizing: border-box;
+    transition: box-shadow 0.3s ease;
+}
+
+.container:hover {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+h1, h2, h3 {
+    color: #1a73e8;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+/* Títulos Responsivos y Estilizados */
+h1 {
+    font-size: clamp(1.6rem, 5vw, 2.2rem);
+}
+h2 {
+    font-size: clamp(1.4rem, 4vw, 1.8rem);
+}
+h3 {
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
+}
+
+/* Barra de Navegación Modernizada */
+.navbar {
+    background: linear-gradient(to right, #007bff, #3399ff);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border-radius: 0 0 12px 12px;
+}
+
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.7rem 1.2rem;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.1);
+    font-weight: 500;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.2s;
+    white-space: nowrap;
+}
+
+.nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+    transform: translateY(-2px);
+}
+
+/* Estilo Moderno para Formularios */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #34495e;
+    font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 1px solid #d1d9e6;
+    border-radius: 6px;
+    font-size: 1rem;
+    background-color: #f9fafb;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #3399ff;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(51, 153, 255, 0.2);
+}
+
+.form-group small {
+    display: block;
+    margin-top: 0.3rem;
+    color: #7f8c8d;
+    font-size: 0.8rem;
+}
+
+/* Botones Modernos */
+button[type="submit"],
+.print-button,
+.grade-button,
+.options button {
+    display: inline-block;
+    width: 100%;
+    padding: 0.9rem 1.2rem;
+    margin-top: 1.5rem;
+    background: linear-gradient(135deg, #28a745, #218838);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-sizing: border-box;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.3s;
+}
+
+button:hover,
+.print-button:hover,
+.grade-button:hover,
+.options button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.options button {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+}
+
+.grade-button {
+    background: linear-gradient(135deg, #4CAF50, #45a049);
+    margin-top: 0.8rem;
+}
+.grade-button:disabled {
+    background: #e0e0e0;
+    color: #999;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+/* Tarjetas de Estudiantes Refinadas */
+.student-cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.student-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 1.2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    border: 1px solid #e0e0e0;
+    transition: transform 0.2s, box-shadow 0.3s;
+}
+
+.student-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.student-card h2 {
+    color: #1a73e8;
+    margin: 0 0 0.5rem 0;
+    font-size: 1.3rem;
+    text-align: left;
+}
+
+.student-card h3 {
+    color: #444;
+    border-bottom: 1px solid #f0f0f0;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0.8rem;
+}
+
+.student-card p {
+    margin: 0.4rem 0;
+    font-size: 0.92rem;
+    color: #555;
+}
+
+.student-card strong {
+    color: #2c3e50;
+}
+
+/* Contenedor de Calificaciones Modernizado */
+.grade-section {
+    border: 1px solid #e0e0e0;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 10px;
+    background-color: #fdfdfd;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.grade-section h3 {
+    margin-top: 0;
+    color: #1a73e8;
+    font-weight: 600;
+}
+
+/* Contenedor de Entradas */
+.grades-container {
+    margin: 1rem 0;
+}
+
+.test-input-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+    align-items: center;
+}
+
+.test-input-group select,
+.test-input-group input {
+    flex: 1 1 160px;
+    padding: 0.65rem 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    background-color: #f8f9fa;
+    transition: border-color 0.3s ease;
+    min-width: 100px;
+}
+
+.test-input-group input[type="number"] {
+    max-width: 90px;
+    text-align: center;
+}
+
+/* Resultados y Resumen */
+.final-cut-grade {
+    font-weight: bold;
+    margin-top: 0.5rem;
+    color: #1a73e8;
+    font-size: 1.05rem;
+}
+
+.cut-status {
+    font-style: italic;
+    color: #888;
+    font-size: 0.85rem;
+}
+
+.final-subject-grade-section {
+    border-top: 2px solid #1a73e8;
+    padding-top: 1.5rem;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.final-subject-grade-section h3 {
+    color: #1a73e8;
+}
+
+#finalSubjectGrade {
+    font-size: 2.3rem;
+    font-weight: 700;
+    color: #1a73e8;
+}
+
+/* Estilos para Mensajes */
+#noStudentsMessage,
+#noPaymentsMessage,
+#paymentMessage {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 1rem;
+    color: #856404;
+    padding: 1rem;
+    background-color: #fff8e1;
+    border: 1px solid #ffeeba;
+    border-radius: 10px;
+}
+
+/* Tablas Responsive */
+.grades-table,
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+}
+
+/*****/
+/* Encabezado de Tablas */
+.grades-table thead,
+.data-table thead {
+    display: table-header-group;
+    background-color: #f1f3f5;
+}
+
+.grades-table th,
+.grades-table td,
+.data-table th,
+.data-table td {
+    border: 1px solid #dfe3e8;
+    padding: 0.75rem 1rem;
+    text-align: center;
+    min-width: 90px;
+    font-size: 0.95rem;
+    color: #333;
+}
+
+.grades-table th,
+.data-table th {
+    background-color: #e0e7ef;
+    font-weight: 600;
+    color: #37474f;
+}
+
+/* Fila Zebra y Hover */
+.grades-table tr:nth-child(even),
+.data-table tr:nth-child(even) {
+    background-color: #fafbfc;
+}
+
+.grades-table tr:hover,
+.data-table tr:hover {
+    background-color: #f0f4f8;
+    cursor: default;
+}
+
+/* Fila Destacada */
+.grades-table .final-grade-row td {
+    font-weight: bold;
+    background-color: #e3f2fd;
+    color: #1565c0;
+}
+
+/* Contenedor de Notas de Estudiantes */
+.student-grades-container {
+    margin-bottom: 2rem;
+    padding: 1.2rem;
+    border: 1px solid #dce1e7;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.035);
+}
+
+.student-grades-container h2 {
+    color: #1a73e8;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #1a73e8;
+    padding-bottom: 0.5rem;
+}
+
+/* Estilo para Impresión */
+.print-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.print-header h1 {
+    color: #1a73e8;
+    font-size: 2rem;
+    margin-bottom: 0.25rem;
+}
+
+.print-header p {
+    font-size: 1rem;
+    margin: 0.25rem 0;
+    color: #555;
+}
+
+/* Ocultar elementos no deseados para la impresión */
+@media print {
+    body {
+        margin: 0;
+        padding: 0;
+        background-color: #fff; /* Fondo blanco para impresión */
+        color: #000; /* Texto negro para impresión */
+        font-size: 11pt; /* Tamaño de fuente estándar para impresión */
+    }
+    .container {
+        width: auto;
+        margin: 0;
+        padding: 0;
+        box-shadow: none; /* Sin sombra en impresión */
+        border-radius: 0;
+    }
+    .navbar,
+    .print-button,
+    button[type="submit"],
+    .grade-button,
+    .options button { /* Ocultar todos los botones */
+        display: none !important;
+    }
+    /* Asegurar que las tablas se vean bien en impresión */
+    .grades-table,
+    .data-table {
+        border: 1px solid #000; /* Borde más oscuro para impresión */
+        page-break-inside: auto; /* Permite que las tablas se dividan si son muy largas */
+        overflow-x: visible; /* Asegurar que no haya scroll en impresión */
+        white-space: normal; /* Permitir que el texto de la tabla se rompa en líneas */
+    }
+    .grades-table tr,
+    .data-table tr {
+        page-break-inside: avoid;
+        page-break-after: auto;
+    }
+    .grades-table th,
+    .grades-table td,
+    .data-table th,
+    .data-table td {
+        border: 1px solid #000;
+        padding: 8px;
+        font-size: 0.9em;
+    }
+}
+
+/* --- Media Queries para Responsive Design --- */
+
+/* Pantallas pequeñas (generalmente teléfonos, hasta 767px) */
+@media (max-width: 767px) {
+    .container {
+        margin: 10px; /* Más margen en los lados para no pegar a los bordes */
+        padding: 15px; /* Reducir padding interno */
+    }
+
+    h1 {
+        font-size: 1.6em; /* Reducir aún más */
+        margin-bottom: 15px;
+    }
+
+    /* Navbar: apilar enlaces verticalmente */
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 10px;
+        gap: 8px; /* Reducir espacio entre elementos */
+    }
+
+    .nav-link {
+        width: calc(100% - 20px); /* Ocupa casi todo el ancho disponible */
+        text-align: center;
+        padding: 8px 0; /* Padding vertical más ajustado */
+        font-size: 0.95em;
+    }
+
+    .form-group input,
+    .form-group select {
+        padding: 10px; /* Reducir padding de inputs */
+        font-size: 0.9em;
+    }
+
+    button,
+    .print-button {
+        padding: 10px 15px;
+        font-size: 1em;
+        margin-top: 15px; /* Reducir margen superior */
+    }
+
+    /* Tablas: Forzar scroll horizontal para no desbordar */
+    .grades-table,
+    .data-table {
+        font-size: 0.85em; /* Fuente más pequeña */
+        /* display: block; y overflow-x: auto; ya están en los estilos generales de tabla */
+    }
+    .grades-table th,
+    .grades-table td,
+    .data-table th,
+    .data-table td {
+        padding: 8px 5px; /* Ajustar padding */
+        min-width: 60px; /* Un poco más pequeño el mínimo */
+    }
+
+
+    /* Ajustes específicos para secciones (como Calificaciones, Notas) */
+    .test-input-group {
+        flex-direction: column; /* Apilar elementos de grupos de input */
+        gap: 8px;
+    }
+
+    .test-input-group select,
+    .test-input-group input {
+        width: 100%; /* Ocupa el ancho completo cuando se apilan */
+        flex: none; /* Desactivar el flex-grow/shrink para que ocupen 100% */
+    }
+    .test-input-group input[type="number"] {
+        max-width: 100%; /* Permitir que se estire al 100% */
+        text-align: left; /* Volver al texto a la izquierda si no cabe centrado */
+    }
+
+    .student-card {
+        padding: 10px;
+    }
+    .student-card h2 {
+        font-size: 1.2em;
+    }
+    .student-card p {
+        font-size: 0.85em;
+    }
+
+    .student-grades-container {
+        padding: 15px;
+    }
+    .student-grades-container h2 {
+        font-size: 1.3em;
+        margin-bottom: 10px;
+        padding-bottom: 8px;
+    }
+}
+
+/* Pantallas muy pequeñas (vertical de teléfonos, hasta 480px) */
+@media (max-width: 480px) {
+    .container {
+        margin: 8px;
+        padding: 12px;
+    }
+
+    h1 {
+        font-size: 1.4em;
+    }
+
+    .navbar {
+        padding: 8px 5px;
+        gap: 5px;
+    }
+
+    .nav-link {
+        font-size: 0.9em;
+        padding: 6px 0;
+    }
+
+    .form-group label {
+        font-size: 0.9em;
+    }
+
+    .form-group input,
+    .form-group select {
+        padding: 8px;
+        font-size: 0.85em;
+    }
+
+    button,
+    .print-button {
+        padding: 8px 12px;
+        font-size: 0.9em;
+    }
+
+    .grades-table th,
+    .grades-table td,
+    .data-table th,
+    .data-table td {
+        font-size: 0.75em; /* Fuente aún más pequeña */
+        padding: 6px 3px;
+        min-width: 50px;
+    }
+
+    .student-card h2 {
+        font-size: 1.1em;
+    }
+
+    .student-card p {
+        font-size: 0.8em;
+    }
+
+    .final-subject-grade-section #finalSubjectGrade {
+        font-size: 1.8em;
+    }
+}
+
+/* Estilos para botones de acción en ver_pagos.html */
+.action-button {
+    display: inline-block; /* Para que estén uno al lado del otro */
+    width: 48%; /* Casi la mitad del ancho */
+    padding: 12px 20px;
+    margin-top: 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-sizing: border-box;
+}
+
+.action-button.confirm {
+    background-color: #28a745; /* Verde para confirmar */
+    color: white;
+    margin-right: 2%; /* Espacio entre los botones */
+}
+
+.action-button.confirm:hover {
+    background-color: #218838;
+}
+
+.action-button.reject {
+    background-color: #dc3545; /* Rojo para rechazar */
+    color: white;
+}
+
+.action-button.reject:hover {
+    background-color: #c82333;
+}
+
+/* Ajuste para móviles para los botones de acción */
+@media (max-width: 767px) {
+    .action-button {
+        width: 100%; /* Ocupan todo el ancho en móviles */
+        margin-right: 0; /* Sin margen entre ellos */
+        margin-bottom: 10px; /* Espacio vertical entre ellos */
+    }
+    .action-button.confirm {
+        margin-bottom: 10px; /* Asegurar espacio si están apilados */
+    }
+}
