@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Sistema de Inscripciones</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <h1>Sistema de Inscripciones</h1>
+
+  <button id="mostrarFormulario">Inscribir nuevo estudiante</button>
+
+  <form id="formulario">
+    <fieldset>
+      <legend>Datos Personales</legend>
+      <label>Nombre completo:</label>
+      <input type="text" id="nombre" required>
+
+      <label>Edad:</label>
+      <input type="number" id="edad" required>
+
+      <label>Dirección:</label>
+      <input type="text" id="direccion" required>
+
+      <label>Teléfono:</label>
+      <input type="text" id="telefono" required>
+    </fieldset>
+
+    <fieldset>
+      <legend>Datos del Representante</legend>
+      <label>Nombre del representante:</label>
+      <input type="text" id="representante">
+
+      <label>Teléfono del representante:</label>
+      <input type="text" id="tel_representante">
+    </fieldset>
+
+    <fieldset>
+      <legend>Datos de Egreso</legend>
+      <label>Institución de egreso:</label>
+      <select id="institucion" required>
+        <option value="">-- Selecciona una institución --</option>
+        <option>Liceo Los Robles</option>
+        <option>Liceo Francisco Javier Pulgar</option>
+        <option>Liceo Nacional Evaristo Fernández Ocando</option>
+        <option>Liceo San Lucas</option>
+        <option>Liceo San José de Calasanz</option>
+        <option>Liceo Jesús Ramón Contreras Gelvez</option>
+        <option>Liceo Santa Ana de Jesús</option>
+      </select>
+
+      <label>Promedio:</label>
+      <input type="number" step="0.01" id="promedio" required>
+    </fieldset>
+
+    <fieldset>
+      <legend>Selección de Carrera</legend>
+      <label>Carrera deseada:</label>
+      <select id="carrera" required>
+        <option value="">-- Selecciona una carrera --</option>
+        <option>Medicina</option>
+        <option>Ingeniería en Sistemas</option>
+        <option>Derecho</option>
+        <option>Psicología</option>
+        <option>Arquitectura</option>
+      </select>
+
+      <label>Turno:</label>
+      <select id="turno" required>
+        <option value="">-- Selecciona un turno --</option>
+        <option>Mañana</option>
+        <option>Tarde</option>
+        <option>Noche</option>
+      </select>
+
+      <label>Número SNI:</label>
+      <input type="text" id="sni" required>
+    </fieldset>
+
+    <button type="submit">Registrar</button>
+  </form>
+
+  <hr>
+
+  <h2>Estudiantes Inscritos</h2>
+  <table id="tablaEstudiantes">
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Edad</th>
+        <th>Carrera</th>
+        <th>Turno</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <script src="script.js"></script>
+</body>
+</html>
